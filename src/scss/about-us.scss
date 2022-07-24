@@ -89,18 +89,18 @@
         color: #1b1c21;
       }
 
-      &__title{
+      &__title {
         &::before {
           display: block;
           content: '';
           position: absolute;
           left: -16px;
-  
+
           width: 4px;
           height: 40px;
-  
+
           background: #41f6d7;
-  
+
           border-top-right-radius: 50px;
           border-bottom-right-radius: 50px;
         }
@@ -180,7 +180,7 @@
       margin-right: 1rem;
     }
 
-    &__expand{
+    &__expand {
       position: relative;
     }
 
@@ -226,9 +226,9 @@
       padding-bottom: 1.5rem;
     }
 
-    &__header{
-      &__title{
-        &::before{
+    &__header {
+      &__title {
+        &::before {
           left: -24px;
         }
       }
@@ -236,7 +236,6 @@
   }
 
   .about-us {
-
     &__wrapper {
       flex-direction: row;
     }
@@ -286,15 +285,15 @@
 
 @media (min-width: 1366px) {
   .header,
-  .main{
+  .main {
     max-width: 1366px;
   }
 
-  .main-wrapper{
+  .main-wrapper {
     display: flex;
     justify-content: center;
   }
-  
+
   .top-menu {
     display: none;
   }
@@ -309,8 +308,7 @@
       padding-top: 2.625rem;
     }
 
-    &__header{
-
+    &__header {
       &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -337,8 +335,8 @@
         }
       }
 
-      &__title{
-        &::before{
+      &__title {
+        &::before {
           left: -32px;
         }
       }
@@ -346,7 +344,6 @@
   }
 
   .slider-menu {
-
     overflow: auto;
     flex-wrap: wrap;
     margin: 0.5rem 0 1.1rem 0;
