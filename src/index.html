@@ -1,106 +1,302 @@
-    <!DOCTYPE html>
-    <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CPS</title>
-    </head>
-    <body>
-            <header>
-                <nav class="top-menu">
-                    <div class="top-menu__wrapper wrapper">
-                        <div class="top-menu__part">
-                            <button class="burger">
-                                <img src="./img/01.svg" widnth="40" height="40" alt="Меню">                         
-                            </button>
-                            <div class="divider divider--hide"></div>
-                            <a href="#" class="logo">
-                                <img src="./img/logo.svg" widnth="40" height="40" alt="CPS">
-                            </a>
-                        </div>
-    
-                        <div class="top-menu__part">
-                            <button class="btn" hidden>
-                                <img src="./img/02.svg"  widnth="40" height="40" alt="Звонок">
-                            </button>
-                            <button class="btn" hidden>
-                                <img src="./img/03.svg" widnth="40" height="40" alt="Написать в чат">
-                            </button>
-                            <button class="btn" hidden>
-                                <img src="./img/04.svg" widnth="40" height="40" alt="Профиль">
-                            </button>
-                            <div class="divider"></div>
-                            <button class="btn">
-                                <img src="./img/04.svg" widnth="40" height="40" alt="Профиль">
-                            </button>
-                            <button class="btn">
-                                <img src="./img/04.svg" widnth="40" height="40" alt="Профиль">
-                                    
-                            </button>
-                        </div>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CPS</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <header>
+        <nav class="top-menu">
+          <div class="top-menu__wrapper wrapper">
+            <div class="top-menu__part">
+              <button class="burger">
+                <img src="./img/01.svg" widnth="40" height="40" alt="Меню" />
+              </button>
+              <div class="divider divider--hide"></div>
+              <a href="#" class="logo">
+                <img src="./img/logo.svg" widnth="40" height="40" alt="CPS" />
+              </a>
+            </div>
+
+            <div class="top-menu__part">
+              <button class="btn hide">
+                <img src="./img/02.svg" widnth="40" height="40" alt="Звонок" />
+              </button>
+              <button class="btn" hidden>
+                <img
+                  src="./img/03.svg"
+                  widnth="40"
+                  height="40"
+                  alt="Написать в чат"
+                />
+              </button>
+              <button class="btn" hidden>
+                <img src="./img/04.svg" widnth="40" height="40" alt="Профиль" />
+              </button>
+              <div class="divider"></div>
+              <button class="btn">
+                <img src="./img/04.svg" widnth="40" height="40" alt="Профиль" />
+              </button>
+              <button class="btn">
+                <img src="./img/04.svg" widnth="40" height="40" alt="Профиль" />
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <aside class="aside-menu hide">
+        <div class="aside-menu__header aside-header">
+          <div class="aside-header__wrapper">
+            <div class="aside-header__part header-part">
+              <button class="header-part__btn-close">
+                <img src="./img/04.svg" widnth="40" height="40" alt="Профиль" />
+              </button>
+              <a href="#" class="logo">
+                <img
+                  src="./img/logo.svg"
+                  widnth="96"
+                  height="55"
+                  alt="Профиль"
+                />
+              </a>
+            </div>
+            <div class="aside-header__part header-part">
+              <button class="header-part__btn-search">
+                <img src="./img/04.svg" widnth="40" height="40" alt="Профиль" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="aside-menu__main-wrapper">
+          <div class="aside-menu__nav nav">
+            <ul class="nav__wrapper">
+              <li
+                ><a class="nav__link nav__link--current" href="#"
+                  >Ремонт техники</a
+                ></li
+              >
+              <li><a class="nav__link" href="#">Услуги и сервисы</a></li>
+              <li><a class="nav__link" href="#">Корпоративным клиентам</a></li>
+              <li><a class="nav__link" href="#">Продавцам техники</a></li>
+              <li><a class="nav__link" href="#">Партнерам</a></li>
+              <li><a class="nav__link" href="#">Производителям</a></li>
+              <li><a class="nav__link" href="#">Наши сервисные центры</a></li>
+              <li><a class="nav__link" href="#">Контакты</a></li>
+            </ul>
+          </div>
+
+          <div class="aside-menu__contact contact">
+            <div class="contact__btns btn">
+              <button class="btn__contact">
+                <img src="./img/04.svg" widnth="40" height="40" alt="Профиль" />
+              </button>
+              <button class="btn__chat">
+                <img src="./img/04.svg" widnth="40" height="40" alt="Профиль" />
+              </button>
+              <button class="btn__profile">
+                <img src="./img/04.svg" widnth="40" height="40" alt="Профиль" />
+              </button>
+            </div>
+            <a class="contact__email" href="mailto:mail@cps.com"
+              >mail@cps.com</a
+            >
+            <a class="contact__phone" href="tel:+78008908900">8 800 890 8900</a>
+          </div>
+
+          <div class="aside-menu__page-lang page-lang">
+            <div class="page-lang__wrapper">
+              <a class="page-lang__item page-lang__item--selected" href="#"
+                >RU</a
+              >
+              <a class="page-lang__item" href="#">EN</a>
+              <a class="page-lang__item" href="#">CH</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main>
+        <section class="main">
+          <div class="main__wrapper wrapper">
+            <div class="main__header">
+              <div class="main__header__wrapper">
+                <h1 class="main__header__title"> Услуги и сервисы </h1>
+
+                <div class="main__header__btns hide">
+                  <button class="btn">
+                    Оставить заявку
+                    <img
+                      src="./img/04.svg"
+                      widnth="40"
+                      height="40"
+                      alt="Профиль"
+                    />
+                  </button>
+                  <button class="btn">
+                    Статус ремонта
+                    <img
+                      src="./img/04.svg"
+                      widnth="40"
+                      height="40"
+                      alt="Профиль"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <nav class="slider-menu">
+              <a href="#" class="slider-menu__item slider-menu__item--selected"
+                >Ремонтируемые устройства</a
+              >
+              <a href="#" class="slider-menu__item">Дополнительные услуги</a>
+              <a href="#" class="slider-menu__item">Цены на услуги</a>
+              <a href="#" class="slider-menu__item">Адреса сервисных центров</a>
+              <a href="#" class="slider-menu__item">Специальные цены</a>
+              <a href="#" class="slider-menu__item">Отзывы</a>
+            </nav>
+
+            <div class="about-us">
+              <div class="about-us__wrapper">
+                <div class="about-us__text">
+                  <p
+                    >Мы являемся авторизованным сервисным центром по ремонту
+                    техники Dell. Только у нас вы можете отремонтировать свой
+                    ноутбук Dell с официальной гарантией производителя.</p
+                  >
+                  <p
+                    ><span class="hide"
+                      >Мы успешно работаем с 1992 года и заслужили репутацию
+                      надежного партнера</span
+                    ><span class="hide"
+                      >, что подтверждает большое количество постоянных
+                      клиентов. Мы гордимся тем, что к нам обращаются по
+                      рекомендациям и, в свою очередь, советуют нас родным и
+                      близким.</span
+                    ></p
+                  >
+
+                  <button class="about-us__expand expand">
+                    <img
+                      src="./img/04.svg"
+                      widnth="40"
+                      height="40"
+                      alt="Профиль"
+                    />
+                    Читать далее</button
+                  >
+                </div>
+
+                <div class="about-us__bg-image">
+                  <img src="img/background.png" alt="Company Photo" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__header">
+            <div class="section__header__wrapper">
+              <h2 class="section__header__text"
+                >Ремонт техники различных брендов</h2
+              >
+            </div>
+          </div>
+
+          <div class="section__repair repair-block">
+            <div class="repair-block__wrapper">
+              <div class="repair-block__items items swiper-container">
+                <div class="items__wrapper swiper-wrapper">
+                  <div class="items__block swiper-slide">
+                    <div class="items__img">
+                      <img src="./img/1.png" alt="Lenovo" />
                     </div>
-                </nav>            
-            </header>
-    
-            <main>
-                <section class="main">
-                    <div class="main__wrapper wrapper">
-                        <div class="main__header">
-                            <div class="main__header__wrapper">
-    
-                                <h1 class="main__header__title">
-                                    Услуги и сервисы
-                                </h1>
-    
-                                <div class="main__header__btns" hidden>
-                                    <button class="btn">
-                                        Оставить заявку
-                                        <img src="./img/04.svg" widnth="40" height="40" alt="Профиль">
-                                    </button>
-                                    <button class="btn">
-                                        Статус ремонта
-                                        <img src="./img/04.svg" widnth="40" height="40" alt="Профиль">
-                                            
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <nav class="slider-menu">
-                            <a href="#" class="slider-menu__item slider-menu__item--selected">Ремонтируемые устройства</a>
-                            <a href="#" class="slider-menu__item">Дополнительные услуги</a>
-                            <a href="#" class="slider-menu__item">Цены на услуги</a>
-                            <a href="#" class="slider-menu__item">Адреса сервисных центров</a>
-                            <a href="#" class="slider-menu__item">Специальные цены</a>
-                            <a href="#" class="slider-menu__item">Отзывы</a>
-                        </nav>
-                        
-    
-                        <div class="about-us">
-                            <div class="about-us__wrapper">
-                                <div class="about-us__text">
-                                <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. 
-                                Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-                                <br>
-                                <p><span hidden>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</span><span hidden>, 
-                                что подтверждает большое количество постоянных клиентов. Мы гордимся тем, 
-                                что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span></p>
-    
-                                <button class="about-us__expand expand">
-                                    <img src="./img/04.svg" widnth="40" height="40" alt="Профиль">
-                                    Читать далее</button>
-                                </div>
-    
-                                <div class="about-us__bg-image">
-                                    <img src="img/background.png" alt="Company Photo">
-                                </div>
-                             </div>
-                        </div>
+                    <button class="items__button"></button>
+                  </div>
+                  <div class="items__block swiper-slide">
+                    <div class="items__img">
+                      <img src="./img/2.png" alt="Bosch" />
                     </div>
-                </section>
-            </main>
-    </body>
-    </html>
-</body>
+                    <button class="items__button"></button>
+                  </div>
+                  <div class="items__block swiper-slide">
+                    <div class="items__img">
+                      <img src="./img/3.png" alt="Samsung" />
+                    </div>
+                    <button class="items__button"></button>
+                  </div>
+                  <div class="items__block swiper-slide">
+                    <div class="items__img">
+                      <img src="./img/4.png" alt="HP" />
+                    </div>
+                    <button class="items__button"></button>
+                  </div>
+                  <div class="items__block swiper-slide">
+                    <div class="items__img">
+                      <img src="./img/5.png" alt="Apple" />
+                    </div>
+                    <button class="items__button"></button>
+                  </div>
+                  <div class="items__block swiper-slide">
+                    <div class="items__img">
+                      <img src="./img/6.png" alt="Acer" />
+                    </div>
+                    <button class="items__button"></button>
+                  </div>
+                  <div class="items__block swiper-slide">
+                    <div class="items__img">
+                      <img src="./img/7.png" alt="ViewSonic" />
+                    </div>
+                    <button class="items__button"></button>
+                  </div>
+                  <div class="items__block swiper-slide">
+                    <div class="items__img">
+                      <img src="./img/8.png" alt="Sony" />
+                    </div>
+                    <button class="items__button"></button>
+                  </div>
+                  <div class="items__block swiper-slide">
+                    <div class="items__img">
+                      <img src="./img/1.png" alt="Lenovo" />
+                    </div>
+                    <button class="items__button"></button>
+                  </div>
+                  <div class="items__block swiper-slide">
+                    <div class="items__img">
+                      <img src="./img/2.png" alt="Bosch" />
+                    </div>
+                    <button class="items__button"></button>
+                  </div>
+                  <div class="items__block swiper-slide">
+                    <div class="items__img">
+                      <img src="./img/3.png" alt="Samsung" />
+                    </div>
+                    <button class="items__button"></button>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <button
+                  class="repair-block__expand repair-block__expand--false"
+                >
+                  <img
+                    class="repair-block__expand__icon"
+                    src="./img/expand.svg"
+                    width="24"
+                    height="24"
+                  />
+                  <span class="repair-block__expand__text">Показать все</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  </body>
 </html>
