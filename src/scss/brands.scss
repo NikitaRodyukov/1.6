@@ -9,83 +9,96 @@
       background-color: transparent;
     }
   }
-  .section__header {
-    background: linear-gradient(270deg, #ffffff 0%, #f8f8f8f8 98.61%);
+  .section{
+    &__header {
+        background: linear-gradient(270deg, #ffffff 0%, #f8f8f8f8 98.61%);
+
+        &__wrapper {
+            padding: 1rem;
+          }
+      }
   }
 
-  .section__header__wrapper {
-    padding: 1rem;
-  }
-
-  .repair-block__items {
-    padding: 1.5rem 1rem;
-  }
-
-  .section__header__text {
-    font-size: 1rem;
-    line-height: 1.5rem;
-
-    letter-spacing: -0.2px;
-    text-transform: uppercase;
-
-    color: #7e7e82;
-  }
-  .repair-block {
+  .repair-block{
     height: 154px;
 
     &__wrapper {
       position: relative;
     }
+
+    &__items {
+        padding: 1.5rem 1rem;
+
+        &::after {
+            display: block;
+            position: absolute;
+            top: 25px;
+            z-index: 1;
+            content: '';
+            right: -1px;
+        
+            width: 1.5rem;
+            height: 4.5rem;
+        
+            background: linear-gradient(
+              270deg,
+              #f8f8f8 16.84%,
+              rgba(248, 248, 248, 0.0001) 100%
+            );
+          }
+      }
+
+    &__expand {
+        display: none;
+      }
   }
 
-  .repair-block__items::after {
-    display: block;
-    position: absolute;
-    top: 25px;
-    z-index: 1;
-    content: '';
-    right: 0px;
-
-    width: 1.5rem;
-    height: 4.5rem;
-
-    background: linear-gradient(
-      270deg,
-      #f8f8f8 16.84%,
-      rgba(248, 248, 248, 0.0001) 100%
-    );
+  .section{
+    &__header{
+        &__text {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        
+            letter-spacing: -0.2px;
+            text-transform: uppercase;
+        
+            color: #7e7e82;
+          }
+    }
   }
 
   .swiper-container {
     overflow: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+      }
   }
 
-  .swiper-container::-webkit-scrollbar {
-    display: none;
-  }
-
-  .items__block {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    min-height: 4.5rem;
-    width: 13rem !important;
-    padding: 0 1rem;
-    background: #ffffff;
-    border: 1px solid #eaeaea;
-    border-radius: 6px;
-
-    background-color: #ffffff;
-  }
-
-  .items__button {
-    content: '';
-    width: 40px;
-    height: 40px;
-    background-image: url(../img/go.svg);
+  .items{
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        min-height: 4.5rem;
+        width: 13rem !important;
+        padding: 0 1rem;
+        background: #ffffff;
+        border: 1px solid #eaeaea;
+        border-radius: 6px;
+    
+        background-color: #ffffff;
+      }
+    
+    &__button {
+        content: '';
+        width: 40px;
+        height: 40px;
+        background-image: url(../img/go.svg);
+      }
   }
 
   .swiper-pagination-bullet {
@@ -106,15 +119,15 @@
   .swiper-pagination-fraction {
     top: 115px;
   }
-
-  .repair-block__expand {
-    display: none;
-  }
 }
 
 @media (min-width: 768px) {
-  .section__header__wrapper {
-    padding: 1rem 1.5rem;
+  .section{
+    &__header{
+        &__wrapper {
+            padding: 1rem 1.5rem;
+          }
+    }
   }
 
   button {
@@ -122,92 +135,93 @@
     -webkit-tap-highlight-color: transparent;
   }
 
-  .repair-block__items {
-    padding: 1.5rem 1.5rem;
-  }
-
-  .repair-block {
+  .repair-block{
     height: auto;
-  }
 
-  .repair-block__items {
-    margin-bottom: 1rem;
-  }
+    &__items {
+        padding: 1.5rem 1.5rem;
+        margin-bottom: 1rem;
 
-  .repair-block__items::after {
-    display: none;
+        &::after {
+            display: none;
+        }
+    }
+
+    &__expand {
+        display: flex;
+        font-family: 'TT Lakes Medium';
+        position: relative;
+        margin-left: 1.5rem;
+        vertical-align: middle;
+        transition: translateY 1s ease-in-out;
+        margin-top: 24px;
+
+        &__icon {
+            position: absolute;
+            top: -4px;
+            left: -28px;
+            transition: all 0.3s ease-in-out;
+
+            &--rotated {
+                transform: rotate(180deg);
+              }
+          }
+      }
   }
 
   .swiper-container {
     height: auto;
   }
 
-  .items__wrapper {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr);
-    max-height: 164px;
-    gap: 16px 24px;
-    overflow: hidden;
-    transition: all 1s !important;
-  }
+  .items{
+    &__wrapper {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr);
+        max-height: 170px; 
+        gap: 16px 24px;
+        overflow: hidden;
+        transition: all 1s !important;
 
-  .items__wrapper--expanded {
-    max-height: 480px;
-  }
+        &--expanded {
+            max-height: 480px;
+        }
+      }
+    
+      &__block {
+        visibility: hidden;
+        width: auto !important;
+        min-width: 10rem !important;
 
-  .items__wrapper--small {
-    max-height: 180px;
-  }
-
-  .items__block {
-    display: none;
-    width: auto !important;
-    min-width: 10rem !important;
-  }
-
-  .items__block--show {
-    display: flex;
+        &--show {
+            visibility: visible;
+            display: flex;
+          }
+      }
   }
 
   .swiper-pagination {
     display: none;
   }
-
-  .repair-block__expand {
-    display: flex;
-    font-family: 'TT Lakes Medium';
-    position: relative;
-    margin-left: 1.5rem;
-    vertical-align: middle;
-    transition: translateY 1s ease-in-out;
-    margin-top: 24px;
-  }
-
-  .repair-block__expand--false {
-    transform: translateY(0);
-  }
-
-  .repair-block__expand__icon {
-    position: absolute;
-    top: -4px;
-    left: -28px;
-    transition: all 0.3s ease-in-out;
-  }
-  .repair-block__expand__icon--rotated {
-    transform: rotate(180deg);
-  }
 }
 
 @media (min-width: 1366px) {
-  .section__header__wrapper {
-    padding: 1rem 2rem;
+  .section{
+    &__header{
+        &__wrapper {
+            padding: 1rem 2rem;
+          }
+    }
   }
 
-  .repair-block__items {
-    padding: 1.5rem 2rem;
+  .repair-block{
+    &__items {
+        padding: 1.5rem 2rem;
+      }
   }
 
-  .items__wrapper {
-    grid-template-columns: repeat(4, 1fr);
+  .items{
+    &__wrapper {
+        grid-template-columns: repeat(4, 1fr);
+      }
   }
 }
