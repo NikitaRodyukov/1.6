@@ -419,11 +419,12 @@ a {
   font-family: 'TT Lakes Bold';
   font-size: 1.5rem; }
 
-.page-lang__item {
-  font-family: 'TT Lakes Medium'; }
-
-.page-lang--selected {
-  color: #7E7E82; }
+.page-lang {
+  margin-bottom: 2rem; }
+  .page-lang__item {
+    font-family: 'TT Lakes Medium'; }
+  .page-lang--selected {
+    color: #7E7E82; }
 
 @media (min-width: 1366px) {
   .aside-menu {
