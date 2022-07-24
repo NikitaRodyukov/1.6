@@ -6,8 +6,10 @@
     }
 
     button{
+
         &:hover{
-        cursor: pointer;}
+        cursor: pointer;
+        }
     }   
     
     .top-menu{
@@ -70,30 +72,31 @@
             &__wrapper{
                 padding-left: 0;
             }
-        }
 
-        &__title{
-            display: flex;
-            align-items: center;
+            &__title{
+                display: flex;
+                align-items: center;
+                margin-top: 0;
+        
+                font-size: 1.7rem;
+                font-family: 'TT Lakes Bold'; 
+                color: #1B1C21;
+            }
     
-            font-family: 'TT Lakes Bold';
-            font-size: 1.75rem; 
-            color: #1B1C21;
-        }
-
-        &__title::before{
-            display: block;
-            content: "";
-            position: absolute;
-            left: 0;
-    
-            width: 4px;
-            height: 40px;
-    
-            background: #41F6D7;
-    
-            border-top-right-radius: 50px;
-            border-bottom-right-radius: 50px;
+            &__title::before{
+                display: block;
+                content: "";
+                position: absolute;
+                left: 0;
+        
+                width: 4px;
+                height: 40px;
+        
+                background: #41F6D7;
+        
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;
+            }
         }
     }
 
