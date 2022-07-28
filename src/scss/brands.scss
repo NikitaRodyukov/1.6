@@ -189,7 +189,7 @@
     }
   }
 
-  .items {
+  div.items {
     &__wrapper {
       grid-template-columns: repeat(4, 1fr);
     }

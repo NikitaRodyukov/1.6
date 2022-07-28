@@ -7,7 +7,7 @@ const brands = document.querySelectorAll(".items__block");
 const repairBlock = document.querySelector(".repair-block");
 const expandText = expand.querySelector(".repair-block__expand__text");
 
-const breakpointDesktop = window.matchMedia("(min-width:1120px)");
+const breakpointDesktop = window.matchMedia("(min-width:1366px)");
 if (breakpointDesktop.matches) {
   for (let i = 0; i < 8; i++) {
     brands[i].classList.add("items__block--show");
