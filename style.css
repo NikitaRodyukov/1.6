@@ -321,7 +321,7 @@
       padding: 1rem 2rem; }
   .repair-block__items {
     padding: 1.5rem 2rem; }
-  .items__wrapper {
+  div.items__wrapper {
     grid-template-columns: repeat(4, 1fr); } }
 
 aside {
