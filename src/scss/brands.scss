@@ -5,11 +5,6 @@
   }
 
   .section {
-    button {
-      background-color: transparent;
-    }
-  }
-  .section {
     &__header {
       background: linear-gradient(270deg, #ffffff 0%, #f8f8f8f8 98.61%);
 
@@ -29,6 +24,9 @@
     &__items {
       padding: 1.5rem 1rem;
 
+      button {
+        background-color: transparent;
+      }
       &::after {
         display: block;
         position: absolute;
@@ -67,16 +65,6 @@
     }
   }
 
-  .swiper-container {
-    overflow: hidden;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-
   .items {
     &__block {
       display: flex;
@@ -84,7 +72,7 @@
       align-items: center;
 
       min-height: 4.5rem;
-      width: 13rem !important;
+      width: 13rem;
       padding: 0 1rem;
       background: #ffffff;
       border: 1px solid #eaeaea;
@@ -99,25 +87,6 @@
       height: 40px;
       background-image: url(../img/go.svg);
     }
-  }
-
-  .swiper-pagination-bullet {
-    width: 12px !important;
-    height: 12px !important;
-    margin: 0 12px 0 0 !important;
-    line-height: 12px;
-    border-radius: 50% !important;
-    background-color: #b5b6bc !important;
-
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  .swiper-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal,
-  .swiper-pagination-custom,
-  .swiper-pagination-fraction {
-    top: 115px;
   }
 }
 
@@ -140,7 +109,6 @@
 
     &__items {
       padding: 1.5rem 1.5rem;
-      margin-bottom: 1rem;
 
       &::after {
         display: none;
@@ -173,14 +141,14 @@
     height: auto;
   }
 
-  .items {
+  div.items {
     &__wrapper {
-      display: grid !important;
+      display: grid;
       grid-template-columns: repeat(3, 1fr);
       max-height: 170px;
       gap: 16px 24px;
       overflow: hidden;
-      transition: all 1s !important;
+      transition: all 1s;
 
       &--expanded {
         max-height: 480px;
@@ -189,8 +157,8 @@
 
     &__block {
       visibility: hidden;
-      width: auto !important;
-      min-width: 10rem !important;
+      width: auto;
+      min-width: 10rem;
 
       &--show {
         visibility: visible;
@@ -206,6 +174,8 @@
 
 @media (min-width: 1366px) {
   .section {
+    width: 1046px;
+    float: right;
     &__header {
       &__wrapper {
         padding: 1rem 2rem;

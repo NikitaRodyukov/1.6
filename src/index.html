@@ -13,34 +13,33 @@
           <div class="top-menu__wrapper wrapper">
             <div class="top-menu__part">
               <button class="burger">
-                <img src="./img/01.svg" widnth="40" height="40" alt="Меню" />
+                <img src="./img/01.svg" width="40" height="40" alt="Меню" />
               </button>
               <div class="divider divider--hide"></div>
               <a href="#" class="logo">
-                <img src="./img/logo.svg" widnth="40" height="40" alt="CPS" />
+                <img src="./img/logo.svg" width="100" height="50" alt="CPS" />
               </a>
             </div>
-
             <div class="top-menu__part">
-              <button class="btn hide">
-                <img src="./img/02.svg" widnth="40" height="40" alt="Звонок" />
+              <button class="btn" hidden>
+                <img src="./img/02.svg" width="40" height="40" alt="Звонок" />
               </button>
-              <button class="btn">
+              <button class="btn" hidden>
                 <img
                   src="./img/03.svg"
-                  widnth="40"
+                  width="40"
                   height="40"
                   alt="Написать в чат"
                 />
               </button>
-              <button class="btn hide">
-                <img src="./img/04.svg" widnth="40" height="40" alt="Профиль" />
+              <button class="btn" hidden>
+                <img src="./img/04.svg" width="40" height="40" alt="Профиль" />
               </button>
               <div class="divider"></div>
-              <button class="btn hide">
+              <button class="btn">
                 <img
                   src="./img/05.svg"
-                  widnth="40"
+                  width="40"
                   height="40"
                   alt="Оставить заявку"
                 />
@@ -48,7 +47,7 @@
               <button class="btn">
                 <img
                   src="./img/06.svg"
-                  widnth="40"
+                  width="40"
                   height="40"
                   alt="Статус заказа"
                 />
@@ -57,6 +56,7 @@
           </div>
         </nav>
       </header>
+
       <aside class="aside-menu hide">
         <div class="aside-menu__header aside-header">
           <div class="aside-header__wrapper">
@@ -64,20 +64,20 @@
               <button class="header-part__btn-close">
                 <img
                   src="./img/close-menu.svg"
-                  widnth="40"
+                  width="40"
                   height="40"
                   alt="Закрыть"
                 />
               </button>
               <a href="#" class="logo">
-                <img src="./img/logo.svg" widnth="96" height="55" alt="CPS" />
+                <img src="./img/logo.svg" width="96" height="55" alt="CPS" />
               </a>
             </div>
             <div class="aside-header__part header-part">
               <button class="header-part__btn-search">
                 <img
                   src="./img/search.svg"
-                  widnth="40"
+                  width="40"
                   height="40"
                   alt="Поиск"
                 />
@@ -90,11 +90,11 @@
           <div class="aside-menu__nav nav">
             <ul class="nav__wrapper">
               <li
-                ><a class="nav__link nav__link--current" href="#"
+                ><a class="nav__link" href="#"
                   >Ремонт техники</a
                 ></li
               >
-              <li><a class="nav__link" href="#">Услуги и сервисы</a></li>
+              <li><a class="nav__link nav__link--current" href="#">Услуги и сервисы</a></li>
               <li><a class="nav__link" href="#">Корпоративным клиентам</a></li>
               <li><a class="nav__link" href="#">Продавцам техники</a></li>
               <li><a class="nav__link" href="#">Партнерам</a></li>
@@ -107,18 +107,18 @@
           <div class="aside-menu__contact contact">
             <div class="contact__btns btn">
               <button class="btn">
-                <img src="./img/02.svg" widnth="40" height="40" alt="Звонок" />
+                <img src="./img/02.svg" width="40" height="40" alt="Звонок" />
               </button>
               <button class="btn">
                 <img
                   src="./img/03.svg"
-                  widnth="40"
+                  width="40"
                   height="40"
                   alt="Написать в чат"
                 />
               </button>
               <button class="btn">
-                <img src="./img/04.svg" widnth="40" height="40" alt="Профиль" />
+                <img src="./img/04.svg" width="40" height="40" alt="Профиль" />
               </button>
             </div>
             <a class="contact__email" href="mailto:mail@cps.com"
@@ -139,19 +139,19 @@
         </div>
       </aside>
 
-      <main>
+      
         <section class="main">
           <div class="main__wrapper wrapper">
             <div class="main__header">
               <div class="main__header__wrapper">
                 <h1 class="main__header__title"> Услуги и сервисы </h1>
 
-                <div class="main__header__btns hide">
+                <div class="main__header__btns" hidden>
                   <button class="btn">
                     Оставить заявку
                     <img
                       src="./img/05.svg"
-                      widnth="40"
+                      width="40"
                       height="40"
                       alt="Оставить заявку"
                     />
@@ -160,7 +160,7 @@
                     Статус ремонта
                     <img
                       src="./img/06.svg"
-                      widnth="40"
+                      width="40"
                       height="40"
                       alt="Статус заказа"
                     />
@@ -189,10 +189,10 @@
                     ноутбук Dell с официальной гарантией производителя.</p
                   >
                   <p
-                    ><span class="hide"
+                    ><span hidden
                       >Мы успешно работаем с 1992 года и заслужили репутацию
                       надежного партнера</span
-                    ><span class="hide"
+                    ><span hidden
                       >, что подтверждает большое количество постоянных
                       клиентов. Мы гордимся тем, что к нам обращаются по
                       рекомендациям и, в свою очередь, советуют нас родным и
@@ -201,7 +201,7 @@
                   >
 
                   <button class="about-us__expand expand">
-                    <img src="./img/expand.svg" widnth="24" height="24" />
+                    <img src="./img/expand.svg" width="24" height="24" />
                     Читать далее</button
                   >
                 </div>
@@ -310,7 +310,207 @@
             </div>
           </div>
         </section>
-      </main>
+
+        <section class="section">
+          <div class="section__header">
+            <div class="section__header__wrapper">
+              <h2 class="section__header__text">Цены на услуги</h2>
+            </div>
+          </div>
+
+          <div class="section__services services">
+            <div class="services__wrapper">
+              <div class="services__service service swiper-container">
+                <div class="service__wrapper swiper-wrapper">
+                  <div class="service__item swiper-slide">
+                    <div class="service__item__block block">
+                      <p class="block__type">Ремонтные услуги</p>
+                      <p class="block__name">Диагностика</p>
+                    </div>
+
+                    <div class="service__item__block block">
+                      <p class="block__type">Цена</p>
+                      <p class="block__name">Бесплатно</p>
+                    </div>
+
+                    <div class="service__item__block block">
+                      <p class="block__type">Срок</p>
+                      <p class="block__name">30 мин</p>
+                    </div>
+
+                    <button class="block__button">
+                      <p>Заказать</p>
+                    </button>
+                  </div>
+
+                  <div class="service__item swiper-slide">
+                    <div class="service__item__block block">
+                      <p class="block__type">Ремонтные услуги</p>
+                      <p class="block__name">Замена дисплея</p>
+                    </div>
+
+                    <div class="service__item__block block">
+                      <p class="block__type">Цена</p>
+                      <p class="block__name">1000 ₽</p>
+                    </div>
+
+                    <div class="service__item__block block">
+                      <p class="block__type">Срок</p>
+                      <p class="block__name">30-120 мин</p>
+                    </div>
+
+                    <button class="block__button">
+                      <p>Заказать</p>
+                    </button>
+                  </div>
+
+                  <div class="service__item swiper-slide">
+                    <div class="service__item__block block">
+                      <p class="block__type">Ремонтные услуги</p>
+                      <p class="block__name">Замена полифонического динамика</p>
+                    </div>
+
+                    <div class="service__item__block block">
+                      <p class="block__type">Цена</p>
+                      <p class="block__name">1000 ₽</p>
+                    </div>
+
+                    <div class="service__item__block block">
+                      <p class="block__type">Срок</p>
+                      <p class="block__name">30-120 мин</p>
+                    </div>
+
+                    <button class="block__button">
+                      <p>Заказать</p>
+                    </button>
+                  </div>
+
+                  <div class="service__item swiper-slide">
+                    <div class="service__item__block block">
+                      <p class="block__type">Ремонтные услуги</p>
+                      <p class="block__name">
+                        Тестирование с выдачей технического заключения
+                      </p>
+                    </div>
+
+                    <div class="service__item__block block">
+                      <p class="block__type">Цена</p>
+                      <p class="block__name">1000 ₽</p>
+                    </div>
+
+                    <div class="service__item__block block">
+                      <p class="block__type">Срок</p>
+                      <p class="block__name">30-120 мин</p>
+                    </div>
+
+                    <button class="block__button">
+                      <p>Заказать</p>
+                    </button>
+                  </div>
+
+                  <div class="service__item swiper-slide">
+                    <div class="service__item__block block">
+                      <p class="block__type">Ремонтные услуги</p>
+                      <p class="block__name">Замена программного обеспечения</p>
+                    </div>
+
+                    <div class="service__item__block block">
+                      <p class="block__type">Цена</p>
+                      <p class="block__name">1000 ₽</p>
+                    </div>
+
+                    <div class="service__item__block block">
+                      <p class="block__type">Срок</p>
+                      <p class="block__name">30-120 мин</p>
+                    </div>
+
+                    <button class="block__button">
+                      <p>Заказать</p>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="grid__header">
+                  <p class="grid__header__type">Ремонтные услуги</p>
+                  <p class="grid__header__type">Цена</p>
+                  <p class="grid__header__type">Срок</p>
+                  <button class="block__button hide">
+                    <p>Заказать</p>
+                  </button>
+                </div>
+
+                <div class="service__grid grid">
+                  <div class="grid__row">
+                    <p class="block__name">Диагностика</p>
+                    <p class="block__name">Бесплатно</p>
+                    <p class="block__name">30 мин</p>
+                    <button class="block__button">
+                      <p>Заказать</p>
+                    </button>
+                  </div>
+
+                  <div class="grid__row">
+                    <p class="block__name">Замена дисплея</p>
+                    <p class="block__name">1000 ₽</p>
+                    <p class="block__name">30-120 мин</p>
+                    <button class="block__button">
+                      <p>Заказать</p>
+                    </button>
+                  </div>
+
+                  <div class="grid__row">
+                    <p class="block__name">Замена полифонического динамика</p>
+                    <p class="block__name">1000 ₽</p>
+                    <p class="block__name">30-120 мин</p>
+                    <button class="block__button">
+                      <p>Заказать</p>
+                    </button>
+                  </div>
+
+                  <div class="grid__row">
+                    <p class="block__name">
+                      Тестирование с выдачей технического заключения
+                    </p>
+                    <p class="block__name">1000 ₽</p>
+                    <p class="block__name">30-120 мин</p>
+                    <button class="block__button">
+                      <p>Заказать</p>
+                    </button>
+                  </div>
+
+                  <div class="grid__row">
+                    <p class="block__name">Замена программного обеспечения</p>
+                    <p class="block__name">1000 ₽</p>
+                    <p class="block__name">30-120 мин</p>
+                    <button class="block__button">
+                      <p>Заказать</p>
+                    </button>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="service__annotation">
+                  <p>
+                    Все цены указаны с учетом НДС. Стоимость ремонта указана на
+                    единичную услугу. Для получения коммерческого предложения на
+                    постоянное обслуживание, оставьте заявку.
+                  </p>
+                  <br />
+                  <button><p>Получить коммерческое предложение</p></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      
+
+      <footer>
+        <div class="footer__wrapper">
+          <p>© 2019 CPS
+Разработано командой Apesong </p>
+          <a href="#">Политика конфиденциальности</a>
+          <p>Информация, размещенная на данной странице, не является публичной офертой</p
+        ></div>
+      </footer>
     </div>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   </body>

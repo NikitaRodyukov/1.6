@@ -1,48 +1,4 @@
-// breakpoint where swiper will be destroyed
-// and switches to a dual-column layout
-const breakpointTablet = window.matchMedia("(min-width:768px)");
-// keep track of swiper instances to destroy later
-let mySwiper;
-//////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////
-const breakpointChecker = function () {
-  // if larger viewport and multi-row layout needed
-  if (breakpointTablet.matches) {
-    // clean up old instances and inline styles when available
-    if (mySwiper !== undefined) mySwiper.destroy(true, true);
-    // or/and do nothing
-    return;
-    // else if a small viewport and single column layout needed
-  } else if (!breakpointTablet.matches) {
-    // fire small viewport version of swiper
-    return enableSwiper();
-  }
-};
-//////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////
-const enableSwiper = function () {
-  mySwiper = new Swiper(".repair-block__items", {
-    autoHeight: 100,
-    slidesPerView: "auto",
-
-    spaceBetween: 16,
-    keyboardControl: true,
-
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-};
-//////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////
-// keep an eye on viewport size changes
-breakpointTablet.addListener(breakpointChecker);
-// kickstart
-breakpointChecker();
+import {breakpointTablet} from './swiper';
 
 const blockItems = document.querySelector(".items__wrapper");
 const expand = document.querySelector(".repair-block__expand");
@@ -52,7 +8,6 @@ const repairBlock = document.querySelector(".repair-block");
 const expandText = expand.querySelector(".repair-block__expand__text");
 
 const breakpointDesktop = window.matchMedia("(min-width:1120px)");
-
 if (breakpointDesktop.matches) {
   for (let i = 0; i < 8; i++) {
     brands[i].classList.add("items__block--show");

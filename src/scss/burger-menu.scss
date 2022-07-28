@@ -134,7 +134,11 @@ a {
 }
 
 @media (min-width: 1366px) {
-  .aside-menu {
-    display: block;
+  aside.aside-menu {
+    float: left;
+    visibility: visible;
+    height: 100%;
+
+    box-shadow: none;
   }
 }

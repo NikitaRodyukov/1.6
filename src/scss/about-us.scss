@@ -4,10 +4,6 @@
     overflow-x: hidden;
   }
 
-  .hide {
-    display: none;
-  }
-
   a {
     text-decoration: none;
   }
@@ -37,7 +33,7 @@
     }
   }
 
-  main,
+  section,
   .expand {
     background-color: #f8f8f8;
   }
@@ -45,7 +41,6 @@
   .divider {
     width: 2px;
     height: 2rem;
-    margin: 0 4px 0 4px;
 
     background: #eaeaea;
     border-radius: 1px;
@@ -210,9 +205,19 @@
 }
 
 @media (min-width: 768px) {
-  .btn,
-  .divider {
-    display: block;
+  .top-menu {
+    &__part {
+      .btn,
+      .divider {
+        display: block;
+        visibility: visible;
+        height: auto;
+      }
+
+      .divider{
+        height: 2rem;
+      }
+    }
   }
 
   .wrapper {
@@ -286,12 +291,14 @@
 @media (min-width: 1366px) {
   .header,
   .main {
-    max-width: 1366px;
+    max-width: 1046px;
+    height: fit-content;
+    float: right;
   }
 
   .main-wrapper {
-    display: flex;
-    justify-content: center;
+    max-width: 1366px;
+    margin: 0 auto;
   }
 
   .top-menu {
@@ -303,7 +310,7 @@
     padding-bottom: 2.625rem;
   }
 
-  .main {
+  div.main {
     &__wrapper {
       padding-top: 2.625rem;
     }
@@ -321,6 +328,8 @@
         display: flex;
         justify-content: center;
         gap: 2rem;
+        visibility: visible;
+        height: auto;
 
         .btn {
           display: flex;
