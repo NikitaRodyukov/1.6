@@ -1,13 +1,12 @@
-@import 'about-us';
-@import 'brands';
-@import 'burger-menu';
 @import 'normalize';
-@import url('https://unpkg.com/swiper@8/swiper-bundle.min.css');
-@import 'services';
-@import 'swiper';
-@import 'footer';
+@import 'variables';
 @import 'fonts';
+@import 'burger-menu';
+@import 'about-us';
+@import url('https://unpkg.com/swiper@8/swiper-bundle.min.css');
+@import 'swiper';
+@import 'brands';
+@import 'repair-type';
+@import 'services';
+@import 'footer';
 @import 'modal';
-
-$bgColor: #24292e;
-$text: #fff;

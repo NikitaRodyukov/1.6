@@ -1,0 +1,24 @@
+$white: white;
+
+$bgColorMain: #f8f8f8;
+$bgColorSecond: #eaeaea;
+
+$textColorMain: #7e7e82;
+$textColorSecond: #1b1c21;
+$bgButtonColor: #ff3e79;
+$shadowColor: #41f6d7;
+
+$bgGradient: linear-gradient(
+  270deg,
+  $bgColorMain 16.84%,
+  rgba(248, 248, 248, 0.0001) 100%
+);
+$titleGradient: linear-gradient(270deg, #ffffff 0%, $bgColorMain 98.61%);
+
+$borderColorItemSelected: #b8ffec;
+$borderBlockItem: #eaeaea;
+$borderFooterColor: #d9fff5;
+
+$fontReg: 'TT Lakes Regular';
+$fontMed: 'TT Lakes Medium';
+$fontBold: 'TT Lakes Bold';

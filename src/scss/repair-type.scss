@@ -1,40 +1,24 @@
 @media (min-width: 320px) {
-  .section {
-    &__header {
-      background: $titleGradient;
-
-      &__wrapper {
-        padding: 1rem;
-      }
-    }
-  }
-
-  .repair-block {
-    height: 154px;
-
-    &__wrapper {
-      position: relative;
-    }
-
+  .repair-type {
     &__items {
       padding: 1.5rem 1rem;
 
-      button {
-        background-color: transparent;
-      }
-      
       &::after {
         display: block;
         position: absolute;
-        top: 25px;
+        top: 105px;
         z-index: 1;
         content: '';
-        right: -1px;
+        right: 0px;
 
         width: 1.5rem;
-        height: 4.5rem;
+        height: 166px;
 
-        background: $bgGradient;
+        background: linear-gradient(
+          270deg,
+          #f8f8f8 16.84%,
+          rgba(248, 248, 248, 0.0001) 100%
+        );
       }
     }
 
@@ -43,60 +27,35 @@
     }
   }
 
-  .section {
-    &__header {
-      &__text {
-        font-size: 1rem;
-        line-height: 1.5rem;
-
-        letter-spacing: -0.2px;
-        text-transform: uppercase;
-
-        color: $textColorMain;
-      }
-    }
-  }
-
-  .items {
+  .repair-items {
     &__block {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
 
-      min-height: 4.5rem;
+      height: 8rem;
       width: 13rem;
-      padding: 0 1rem;
-      background: white;
-      border: 1px solid $borderBlockItem;
+      padding: 1rem 1rem;
+      background: #ffffff;
+      border: 1px solid #eaeaea;
       border-radius: 6px;
 
-      background-color: white;
+      background-color: #ffffff;
     }
 
     &__button {
-      content: '';
+      content: "";
       width: 40px;
       height: 40px;
       background-image: url(../img/go.svg);
+      background-color: transparent;
+      align-self: flex-end;
     }
   }
 }
 
 @media (min-width: 768px) {
-  .section {
-    &__header {
-      &__wrapper {
-        padding: 1rem 1.5rem;
-      }
-    }
-  }
-
-  button {
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  .repair-block {
+  .repair-type {
     height: auto;
 
     &__items {
@@ -115,6 +74,7 @@
       vertical-align: middle;
       transition: translateY 1s ease-in-out;
       margin-top: 24px;
+      background-color: transparent;
 
       &__icon {
         position: absolute;
@@ -129,17 +89,17 @@
     }
   }
 
-  div.items {
+  div.repair-items {
     &__wrapper {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      max-height: 170px;
+      max-height: 164px;
       gap: 16px 24px;
       overflow: hidden;
       transition: all 1s;
 
       &--expanded {
-        max-height: 480px;
+        max-height: 700px;
       }
     }
 
@@ -148,36 +108,26 @@
       width: auto;
       min-width: 10rem;
 
+      button {
+        background-color: transparent;
+      }
+
       &--show {
-        visibility: visible;
         display: flex;
+        visibility: visible;
       }
     }
-  }
-
-  .swiper-pagination {
-    display: none;
   }
 }
 
 @media (min-width: 1366px) {
-  .section {
-    width: 1046px;
-    float: right;
-    &__header {
-      &__wrapper {
-        padding: 1rem 2rem;
-      }
-    }
-  }
-
-  .repair-block {
+  .repair-type {
     &__items {
       padding: 1.5rem 2rem;
     }
   }
 
-  div.items {
+  div.repair-items {
     &__wrapper {
       grid-template-columns: repeat(4, 1fr);
     }

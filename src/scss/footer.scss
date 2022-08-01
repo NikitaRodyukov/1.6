@@ -11,25 +11,25 @@
 
       border-top: 1px solid #d9fff5;
 
-      font-family: 'TT Lakes Regular';
+      font-family: $fontReg;
       font-size: 14px;
       line-height: 16px;
 
       text-align: center;
 
-      color: #7e7e82;
+      color: $textColorMain;
 
       mix-blend-mode: normal;
       opacity: 0.72;
 
-      background-color: #f8f8f8;
+      background-color: $bgColorMain;
 
       p:first-child {
         width: 218px;
       }
 
       a {
-        color: #7e7e82;
+        color: $textColorMain;
       }
 
       p:last-child {

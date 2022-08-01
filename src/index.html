@@ -21,10 +21,10 @@
               </a>
             </div>
             <div class="top-menu__part">
-              <button class="btn" hidden>
+              <button class="btn btn-call" hidden>
                 <img src="./img/02.svg" width="40" height="40" alt="Звонок" />
               </button>
-              <button class="btn" hidden>
+              <button class="btn btn-feedback" hidden>
                 <img
                   src="./img/03.svg"
                   width="40"
@@ -106,10 +106,10 @@
 
           <div class="aside-menu__contact contact">
             <div class="contact__btns btn">
-              <button class="btn">
+              <button class="btn btn-call">
                 <img src="./img/02.svg" width="40" height="40" alt="Звонок" />
               </button>
-              <button class="btn">
+              <button class="btn btn-feedback">
                 <img
                   src="./img/03.svg"
                   width="40"
@@ -187,6 +187,7 @@
                   техники Dell. Только у нас вы можете отремонтировать свой
                   ноутбук Dell с официальной гарантией производителя.</p
                 >
+                <br />
                 <p
                   ><span hidden
                     >Мы успешно работаем с 1992 года и заслужили репутацию
@@ -291,6 +292,30 @@
                   </div>
                   <button class="items__button"></button>
                 </div>
+                <div class="items__block swiper-slide">
+                  <div class="items__img">
+                    <img src="./img/8.png" alt="Sony" />
+                  </div>
+                  <button class="items__button"></button>
+                </div>
+                <div class="items__block swiper-slide">
+                  <div class="items__img">
+                    <img src="./img/1.png" alt="Lenovo" />
+                  </div>
+                  <button class="items__button"></button>
+                </div>
+                <div class="items__block swiper-slide">
+                  <div class="items__img">
+                    <img src="./img/2.png" alt="Bosch" />
+                  </div>
+                  <button class="items__button"></button>
+                </div>
+                <div class="items__block swiper-slide">
+                  <div class="items__img">
+                    <img src="./img/3.png" alt="Samsung" />
+                  </div>
+                  <button class="items__button"></button>
+                </div>
               </div>
               <div class="swiper-pagination"></div>
               <button class="repair-block__expand repair-block__expand--false">
@@ -301,6 +326,79 @@
                   height="24"
                 />
                 <span class="repair-block__expand__text">Показать все</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__header">
+          <div class="section__header__wrapper">
+            <h2 class="section__header__text"
+              >Ремонт различных видов техники</h2
+            >
+          </div>
+        </div>
+
+        <div class="section__repair repair-type">
+          <div class="repair-type__wrapper">
+            <div class="repair-type__items repair-items swiper-container">
+              <div class="repair-items__wrapper swiper-wrapper">
+                <div class="repair-items__block swiper-slide">
+                  <p class="repair-items__name"> Ремонт ноутбуков </p>
+                  <button class="repair-items__button"></button>
+                </div>
+                <div class="repair-items__block swiper-slide">
+                  <p class="repair-items__name"> Ремонт планшетов </p>
+                  <button class="repair-items__button"></button>
+                </div>
+                <div class="repair-items__block swiper-slide">
+                  <p class="repair-items__name"> Ремонт ПК </p>
+                  <button class="repair-items__button"></button>
+                </div>
+                <div class="repair-items__block swiper-slide">
+                  <p class="repair-items__name"> Ремонт мониторов </p>
+                  <button class="repair-items__button"></button>
+                </div>
+                <div class="repair-items__block swiper-slide">
+                  <p class="repair-items__name"> Ремонт ПК </p>
+                  <button class="repair-items__button"></button>
+                </div>
+                <div class="repair-items__block swiper-slide">
+                  <p class="repair-items__name"> Ремонт ПК </p>
+                  <button class="repair-items__button"></button>
+                </div>
+                <div class="repair-items__block swiper-slide">
+                  <p class="repair-items__name"> Ремонт ПК </p>
+                  <button class="repair-items__button"></button>
+                </div>
+                <div class="repair-items__block swiper-slide">
+                  <p class="repair-items__name"> Ремонт ПК </p>
+                  <button class="repair-items__button"></button>
+                </div>
+                <div class="repair-items__block swiper-slide">
+                  <p class="repair-items__name"> Ремонт ПК </p>
+                  <button class="repair-items__button"></button>
+                </div>
+                <div class="repair-items__block swiper-slide">
+                  <p class="repair-items__name"> Ремонт ПК </p>
+                  <button class="repair-items__button"></button>
+                </div>
+                <div class="repair-items__block swiper-slide">
+                  <p class="repair-items__name"> Ремонт ПК </p>
+                  <button class="repair-items__button"></button>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <button class="repair-type__expand repair-type__expand--false">
+                <img
+                  class="repair-type__expand__icon"
+                  src="./img/expand.svg"
+                  width="24"
+                  height="24"
+                />
+                <span class="repair-type__expand__text">Показать все</span>
               </button>
             </div>
           </div>
@@ -547,16 +645,17 @@
                 <a href="#">на обработку персональных данных</a> и соглашаетесь
                 с нашей <a href="#">политикой конфиденциальности</a></span
               >
-              <button class="btn-close btn-close--active"></button>
-              <button class="submt-button button" type="submit"
+
+              <button class="submit-button button" type="submit"
                 ><p>Отправить</p></button
               >
             </div>
           </form>
         </div>
+        <button class="btn-close"></button>
       </dialog>
 
-      <dialog class="modal feedback">
+      <dialog class="modal call">
         <div class="modal__wrapper">
           <h1 class="title"> Заказать звонок </h1>
           <form class="form" action="">
@@ -573,13 +672,14 @@
                 <a href="#">на обработку персональных данных</a> и соглашаетесь
                 с нашей <a href="#">политикой конфиденциальности</a></span
               >
-              <button class="btn-close btn-close--active"></button>
-              <button class="submt-button button" type="submit"
+
+              <button class="submit-button button" type="submit"
                 ><p>Отправить</p></button
               >
             </div>
           </form>
         </div>
+        <button class="btn-close"></button>
       </dialog>
     </div>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

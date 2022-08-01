@@ -1,9 +1,4 @@
 @media (min-width: 320px) {
-  html {
-    font-family: 'TT Lakes Regular';
-    overflow-x: hidden;
-  }
-
   .hide {
     visibility: hidden;
     height: 0;
@@ -25,11 +20,7 @@
         width: 1.5rem;
         height: 200px;
 
-        background: linear-gradient(
-          270deg,
-          #f8f8f8 16.84%,
-          rgba(248, 248, 248, 0.0001) 100%
-        );
+        background: $bgGradient;
       }
     }
   }
@@ -51,10 +42,10 @@
       height: 168px;
       width: 228px;
       padding: 1rem 1rem;
-      background: #ffffff;
+      background: $white;
       border-radius: 6px;
 
-      background-color: #ffffff;
+      background-color: $white;
     }
 
     &__grid {
@@ -69,7 +60,7 @@
 
       letter-spacing: 0.2px;
 
-      color: #1b1c21;
+      color: $textColorSecond;
 
       button {
         max-width: 210px;
@@ -78,7 +69,7 @@
         font-weight: 900;
         text-align: left;
 
-        color: #1b1c21;
+        color: $textColorSecond;
         background-color: transparent;
 
         p {
@@ -104,7 +95,7 @@
 
       font-size: 14px;
       line-height: 16px;
-      color: #7e7e82;
+      color: $textColorMain;
 
       mix-blend-mode: normal;
     }
@@ -116,7 +107,7 @@
 
       letter-spacing: 0.2px;
 
-      color: #1b1c21;
+      color: $textColorSecond;
     }
   }
 }
@@ -130,12 +121,12 @@
 
   padding-left: 12px;
   border-radius: 16px;
-  background-color: #ff3e79;
+  background-color: $bgButtonColor;
 
   font-size: 12px;
   line-height: 1px;
   text-align: left;
-  color: white;
+  color: $white;
   font-weight: 600;
   letter-spacing: -0.15px;
   text-transform: uppercase;
@@ -203,7 +194,7 @@
     &__grid {
       display: block;
       padding: 0 16px;
-      background: #ffffff;
+      background: $white;
       border-radius: 6px;
 
       .grid {
@@ -256,14 +247,14 @@
       line-height: 16px;
       /* identical to box height, or 114% */
 
-      color: #7e7e82;
+      color: $textColorMain;
 
       mix-blend-mode: normal;
       opacity: 0.72;
     }
 
     &__row {
-      border-bottom: 1px solid #eaeaea;
+      border-bottom: 1px solid $bgColorSecond;
     }
   }
 
