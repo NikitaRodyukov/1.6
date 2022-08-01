@@ -334,100 +334,115 @@ p {
   font-weight: bold;
   font-style: normal; }
 
-aside {
-  max-width: 320px;
-  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
-  font-family: "TT Lakes Medium";
-  float: left; }
-
-li {
-  list-style: none; }
-
-a {
-  color: #1b1c21; }
-
-.aside-header button {
-  opacity: 1;
-  transition: opacity 0.25s ease-out;
-  background-color: white; }
-  .aside-header button:hover, .aside-header button:focus {
-    opacity: 0.8; }
-
-.aside-header__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 1.5rem 2.6rem 1.5rem; }
-
-.header-part {
-  display: flex;
-  gap: 1rem; }
-  .header-part__btn-close {
-    display: none; }
-
-.aside-menu__main-wrapper {
-  display: flex;
-  flex-direction: column;
-  padding: 0 1.5rem; }
-
-.nav__wrapper {
-  margin-bottom: 268px;
-  padding: 0; }
-
-.nav__link {
-  display: inline-block;
-  margin-bottom: 2rem;
-  font-family: "TT Lakes Medium";
-  font-size: 1rem;
-  letter-spacing: -0.2px; }
-  .nav__link--current {
-    position: relative;
-    color: #7e7e82; }
-    .nav__link--current::before {
-      display: block;
-      content: '';
-      position: absolute;
-      top: -7px;
-      left: -24px;
-      width: 0.25rem;
-      height: 2rem;
-      border-radius: 5px;
-      background-color: #41f6d7; }
-
-.contact__btns {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem; }
-  .contact__btns button {
+@media (min-width: 320px) {
+  .fixed {
+    position: fixed;
+    overflow: auto; }
+  .aside-menu {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 320px;
+    background-color: white;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+    font-family: "TT Lakes Medium";
+    transform: translateX(-100%);
+    transition: all 0.4s ease-in;
+    z-index: 44; }
+    .aside-menu--show {
+      visibility: visible;
+      opacity: 1;
+      transform: translate(0px); }
+  li {
+    list-style: none; }
+  a {
+    color: #1b1c21; }
+  .aside-header button {
     opacity: 1;
     transition: opacity 0.25s ease-out;
-    background-color: white; }
-    .contact__btns button:hover, .contact__btns button:focus {
+    background-color: transparent; }
+    .aside-header button:hover, .aside-header button:focus {
       opacity: 0.8; }
-
-.contact__email {
-  display: inline-block;
-  margin-bottom: 1rem;
-  font-family: "TT Lakes Medium"; }
-
-.contact__phone {
-  display: inline-block;
-  margin-bottom: 2.5rem;
-  font-family: "TT Lakes Bold";
-  font-size: 1.5rem; }
-
-.page-lang {
-  margin-bottom: 2rem; }
-  .page-lang__item {
-    font-family: "TT Lakes Medium"; }
-    .page-lang__item--selected {
+  .aside-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; }
+  .header-part {
+    display: flex;
+    gap: 1rem; }
+    .header-part__btn-close {
+      background-color: transparent; }
+  .aside-menu__main-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem; }
+  .aside-menu__contact {
+    display: flex;
+    flex-direction: column; }
+  .nav__wrapper {
+    margin-bottom: 268px;
+    padding: 0; }
+  .nav__link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-family: "TT Lakes Medium";
+    font-size: 1rem;
+    letter-spacing: -0.2px; }
+    .nav__link--current {
+      position: relative;
       color: #7e7e82; }
+      .nav__link--current::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: -7px;
+        left: -1rem;
+        width: 0.25rem;
+        height: 2rem;
+        border-radius: 5px;
+        background-color: #41f6d7; }
+  .contact__btns {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem; }
+    .contact__btns button {
+      opacity: 1;
+      transition: opacity 0.25s ease-out;
+      background-color: white; }
+      .contact__btns button:hover, .contact__btns button:focus {
+        opacity: 0.8; }
+  .contact__email {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-family: "TT Lakes Medium"; }
+  .contact__phone {
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    font-family: "TT Lakes Bold";
+    font-size: 1.5rem; }
+  .page-lang {
+    margin-bottom: 2rem; }
+    .page-lang__item {
+      font-family: "TT Lakes Medium"; }
+      .page-lang__item--selected {
+        color: #7e7e82; } }
+
+@media (min-width: 360px) {
+  .aside-menu {
+    max-width: 360px; }
+  .aside-header__wrapper {
+    padding: 1.5rem; } }
 
 @media (min-width: 1366px) {
   aside.aside-menu {
-    float: left;
+    position: fixed;
+    float: right;
     visibility: visible;
     height: 100%;
+    max-width: 320px;
+    opacity: 1;
+    transform: translate(0px);
     box-shadow: none; } }
 
 @media (min-width: 320px) {
@@ -1075,39 +1090,52 @@ a {
     width: 982px;
     padding: 2rem 2rem 2rem 2rem; } }
 
-dialog {
-  position: fixed;
-  width: 440px;
-  height: 100vh;
-  border: 0;
-  z-index: 101;
-  transition: translateX 1s ease-in-out;
-  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
-  color: #7e7e82; }
-  dialog .modal__wrapper {
-    position: relative;
-    padding: 24px 1em 0 1em; }
-    dialog .modal__wrapper .submit-button {
-      position: absolute;
-      right: 35px;
-      bottom: -42px; }
-    dialog .modal__wrapper a {
-      color: #ff3e79; }
-  dialog input,
-  dialog textarea {
+body {
+  overflow-x: auto; }
+
+@media (min-width: 320px) {
+  .modal {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    box-sizing: border-box;
+    max-width: 320px;
+    padding: 1rem;
+    border: 0;
+    z-index: 101;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+    color: #7e7e82;
+    background-color: white;
+    transform: translateX(100%);
+    transition: all 0.4s ease-in; }
+    .modal--active {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(7%); }
+    .modal__wrapper {
+      position: relative;
+      padding: 104px 0; }
+      .modal__wrapper .submit-button {
+        position: absolute;
+        right: 35px;
+        bottom: -42px; }
+      .modal__wrapper a {
+        color: #ff3e79; }
+  input,
+  textarea {
     border: 1px solid #eaeaea;
     border-radius: 8px;
     padding: 0.75rem 0 0.75rem 1rem;
-    margin-bottom: 1rem; }
-  dialog input {
-    width: 376px; }
-  dialog .btn-close {
+    margin-bottom: 1rem;
+    width: 90%;
+    resize: none; }
+  .btn-close {
     width: 40px;
     height: 40px;
     background: #ff3e79;
     border-radius: 20px;
-    transform: translateX(-106px); }
-    dialog .btn-close::after {
+    transform: translate(-4px, -720px); }
+    .btn-close::after {
       position: absolute;
       top: 10px;
       left: 20px;
@@ -1118,7 +1146,7 @@ dialog {
       border-radius: 1px;
       transform: rotate(45deg);
       z-index: 102; }
-    dialog .btn-close::before {
+    .btn-close::before {
       position: absolute;
       top: 10px;
       left: 20px;
@@ -1129,27 +1157,36 @@ dialog {
       border-radius: 1px;
       transform: rotate(-45deg);
       z-index: 102; }
+  .call {
+    height: 676px; }
+    .call .btn-close {
+      transform: translate(-4px, -380px); }
+    .call .modal__wrapper .submit-button {
+      right: 35px;
+      bottom: 35px; }
+  .backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    background: white;
+    mix-blend-mode: normal;
+    opacity: 0.96; }
+    .backdrop--show {
+      display: block; } }
 
-.feedback .btn-close {
-  transform: translate(-108px, -521px); }
+@media (min-width: 768px) {
+  .modal--active {
+    transform: translateX(37%); }
+  .title::before {
+    left: -32px; } }
 
-.backdrop {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 100;
-  background: white;
-  mix-blend-mode: normal;
-  opacity: 0.96; }
-  .backdrop--show {
-    display: block; }
-
-dialog[open] {
-  transform: translate(66%, 0);
-  top: 0; }
+@media (min-width: 1366px) {
+  .title::before {
+    left: -32px; } }
 
 
 /*# sourceMappingURL=style.css.map*/
