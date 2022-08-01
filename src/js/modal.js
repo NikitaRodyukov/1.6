@@ -3,32 +3,32 @@ const btnModalClose = document.querySelectorAll('.btn-close')
 const modalFeedback = document.querySelector('.feedback')
 const btnCall = document.querySelectorAll('.btn-call')
 const modalCall = document.querySelector('.call')
-const backdrop = document.querySelector('.backdrop')
+export const backdrop = document.querySelector('.backdrop')
 
-btnFeedback.forEach(function(btn){
-    btn.addEventListener('click', function(){
-        modalFeedback.setAttribute('open', '');
-        backdrop.classList.add('backdrop--show');
-    })
+btnFeedback.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    modalFeedback.classList.add('modal--active')
+    backdrop.classList.add('backdrop--show')
+  })
 })
 
-btnCall.forEach(function(btn){
-    btn.addEventListener('click', function(){
-        modalCall.setAttribute('open', '');
-        backdrop.classList.add('backdrop--show');
-    })
+btnCall.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    modalCall.classList.add('modal--active')
+    backdrop.classList.add('backdrop--show')
+  })
 })
 
-backdrop.addEventListener('click', function(){
-    backdrop.classList.remove('backdrop--show');
-    modalFeedback.removeAttribute('open');
-    modalCall.removeAttribute('open');
+backdrop.addEventListener('click', function () {
+  backdrop.classList.remove('backdrop--show')
+  modalFeedback.classList.remove('modal--active')
+  modalCall.classList.remove('modal--active')
 })
 
-btnModalClose.forEach(function(btn){
-    btn.addEventListener('click', function(){
-        modalFeedback.removeAttribute('open');
-        modalCall.removeAttribute('open');
-        backdrop.classList.remove('backdrop--show');
-    })
+btnModalClose.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    modalFeedback.classList.remove('modal--active')
+    modalCall.classList.remove('modal--active')
+    backdrop.classList.remove('backdrop--show')
+  })
 })

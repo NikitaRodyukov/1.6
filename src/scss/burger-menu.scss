@@ -1,100 +1,40 @@
-aside {
-  max-width: 320px;
+@media (min-width: 320px){
+  .fixed{
+    position: fixed;
+    overflow: auto;
+  }
 
-  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
-    16px 0px 52px rgba(14, 24, 80, 0.2);
-
-  font-family: $fontMed;
-  float: left;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  color: $textColorSecond;
-}
-
-.aside-header {
-  button {
-    opacity: 1;
-    transition: opacity 0.25s ease-out;
-    &:hover,
-    &:focus {
-      opacity: 0.8;
-    }
+  .aside-menu{
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 320px;
     background-color: $white;
-  }
-
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 1.5rem 1.5rem 2.6rem 1.5rem;
-  }
-}
-
-.header-part {
-  display: flex;
-  gap: 1rem;
-
-  &__btn-close {
-    display: none;
-  }
-}
-
-.aside-menu {
-  &__main-wrapper {
-    display: flex;
-    flex-direction: column;
-    padding: 0 1.5rem;
-  }
-}
-
-.nav {
-  &__wrapper {
-    margin-bottom: 268px;
-    padding: 0;
-  }
-
-  &__link {
-    display: inline-block;
-    margin-bottom: 2rem;
-
+  
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+      16px 0px 52px rgba(14, 24, 80, 0.2);
+  
     font-family: $fontMed;
-    font-size: 1rem;
-    letter-spacing: -0.2px;
+    transform: translateX(-100%);
+    transition: all 0.4s ease-in;
 
-    &--current {
-      position: relative;
-      color: $textColorMain;
-
-      &::before {
-        display: block;
-        content: '';
-
-        position: absolute;
-        top: -7px;
-        left: -24px;
-
-        width: 0.25rem;
-        height: 2rem;
-
-        border-radius: 5px;
-        background-color: $shadowColor;
-      }
+    z-index: 44;
+    &--show{
+      visibility: visible;
+      opacity: 1;
+      transform: translate(0px);
     }
   }
-}
-
-.contact {
-  &__btns {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-
+  
+  li {
+    list-style: none;
+  }
+  
+  a {
+    color: $textColorSecond;
+  }
+  
+  .aside-header {
     button {
       opacity: 1;
       transition: opacity 0.25s ease-out;
@@ -102,43 +42,142 @@ a {
       &:focus {
         opacity: 0.8;
       }
-      background-color: $white;
+      background-color: transparent;
+    }
+  
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      padding:1rem;
     }
   }
-
-  &__email {
-    display: inline-block;
-    margin-bottom: 1rem;
-
-    font-family: $fontMed;
+  
+  .header-part {
+    display: flex;
+    gap: 1rem;
+  
+    &__btn-close {
+      background-color: transparent;
+    }
   }
+  
+  .aside-menu {
+    &__main-wrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 0 1rem;
+    }
 
-  &__phone {
-    display: inline-block;
-    margin-bottom: 2.5rem;
-
-    font-family: $fontBold;
-    font-size: 1.5rem;
+    &__contact{
+      display: flex;
+      flex-direction: column;
+    }
   }
+  
+  .nav {
+    &__wrapper {
+      margin-bottom: 268px;
+      padding: 0;
+    }
+  
+    &__link {
+      display: inline-block;
+      margin-bottom: 2rem;
+  
+      font-family: $fontMed;
+      font-size: 1rem;
+      letter-spacing: -0.2px;
+  
+      &--current {
+        position: relative;
+        color: $textColorMain;
+  
+        &::before {
+          display: block;
+          content: '';
+  
+          position: absolute;
+          top: -7px;
+          left: -1rem;
+  
+          width: 0.25rem;
+          height: 2rem;
+  
+          border-radius: 5px;
+          background-color: $shadowColor;
+        }
+      }
+    }
+  }
+  
+  .contact {
+    &__btns {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+  
+      button {
+        opacity: 1;
+        transition: opacity 0.25s ease-out;
+        &:hover,
+        &:focus {
+          opacity: 0.8;
+        }
+        background-color: $white;
+      }
+    }
+  
+    &__email {
+      display: inline-block;
+      margin-bottom: 1rem;
+  
+      font-family: $fontMed;
+    }
+  
+    &__phone {
+      display: inline-block;
+      margin-bottom: 2.5rem;
+  
+      font-family: $fontBold;
+      font-size: 1.5rem;
+    }
+  }
+  
+  .page-lang {
+    margin-bottom: 2rem;
+    &__item {
+      font-family: $fontMed;
+  
+      &--selected {
+        color: $textColorMain;
+      }
+    }
+  }  
 }
 
-.page-lang {
-  margin-bottom: 2rem;
-  &__item {
-    font-family: $fontMed;
+@media (min-width: 360px){
+  .aside-menu{
+    max-width: 360px;
+  }
 
-    &--selected {
-      color: $textColorMain;
+  .aside-header{
+    &__wrapper{
+      padding: 1.5rem;
     }
   }
 }
 
 @media (min-width: 1366px) {
   aside.aside-menu {
-    float: left;
+    position: fixed;
+    float: right;
     visibility: visible;
     height: 100%;
-
+    max-width: 320px;
+    opacity: 1;
+    transform: translate(0px);
     box-shadow: none;
   }
 }
