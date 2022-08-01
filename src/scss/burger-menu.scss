@@ -1,7 +1,10 @@
 @media (min-width: 320px){
   .fixed{
     position: fixed;
+    top: 0;
+    left: 0;
     overflow: auto;
+    width: 100%;
   }
 
   .aside-menu{
@@ -78,7 +81,7 @@
   
   .nav {
     &__wrapper {
-      margin-bottom: 268px;
+     
       padding: 0;
     }
   
@@ -171,7 +174,7 @@
 
 @media (min-width: 1366px) {
   aside.aside-menu {
-    position: fixed;
+    position: absolute;
     float: right;
     visibility: visible;
     height: 100%;

@@ -28,7 +28,7 @@ backdrop.addEventListener('click', function () {
 btnModalClose.forEach(function (btn) {
   btn.addEventListener('click', function () {
     modalFeedback.classList.remove('modal--active')
-    modalCall.classList.remove('modal--active')
+  modalCall.classList.remove('modal--active')
     backdrop.classList.remove('backdrop--show')
   })
 })
