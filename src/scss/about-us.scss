@@ -166,12 +166,12 @@
 
     &__text {
       margin-right: 1rem;
-      height: 110px;
+      height: 150px;
       overflow: hidden;
 
       &--expanded {
         overflow: visible;
-        height: 350px;
+        height: 530px;
       }
 
       .text {
@@ -195,6 +195,13 @@
 
     &__expand {
       position: relative;
+
+      .icon{
+        transition: transform 0.2s ease-in-out;
+        &--rotated{
+          transform: rotate(180deg);
+        }
+      }
     }
 
     &__bg-image {
@@ -269,6 +276,10 @@
     &__text {
       margin-right: 0;
       height: 163px;
+
+      &--expanded {        
+        height: 480px;
+      }
 
       line-height: 1.2rem;
       span {
