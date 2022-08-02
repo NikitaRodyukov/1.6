@@ -459,7 +459,8 @@ p {
   a {
     text-decoration: none; }
   button:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    opacity: 0.8; }
   .top-menu {
     border-bottom: 1px solid #d9fff5; }
     .top-menu button {
