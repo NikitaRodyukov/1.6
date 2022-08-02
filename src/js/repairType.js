@@ -1,4 +1,5 @@
 import { breakpointTablet } from './swiper'
+import { closeItems } from './brands'
 
 const repairBlock = document.querySelector('.repair-type')
 const blockItems = repairBlock.querySelector('.repair-items__wrapper')
@@ -9,6 +10,7 @@ const expandText = expand.querySelector('.repair-type__expand__text')
 
 const breakpointDesktop = window.matchMedia('(min-width:1120px)')
 
+//показ блоков в соответствии с разрешением
 if (breakpointDesktop.matches) {
   for (let i = 0; i < 4; i++) {
     brands[i].classList.add('repair-items__block--show')
@@ -19,8 +21,10 @@ if (breakpointDesktop.matches) {
   }
 }
 
+//показ доб плоков по кнопке
 expand.addEventListener('click', function () {
   if (expand.classList.contains('repair-type__expand--false')) {
+    //проверка открыто ли окно
     if (breakpointDesktop.matches) {
       for (let i = 4; i < brands.length; i++) {
         brands[i].classList.add('repair-items__block--show')
@@ -37,6 +41,7 @@ expand.addEventListener('click', function () {
     expandIcon.classList.add('repair-type__expand__icon--rotated')
     expandText.innerHTML = 'Скрыть'
   } else if (expand.classList.contains('repair-type__expand--expanded')) {
+    //скрывание блоков через кнопку
     repairBlock.classList.remove('repair-type__expand--expanded')
     expand.classList.add('repair-type__expand--false')
     blockItems.classList.remove('repair-items__wrapper--expanded')
@@ -46,15 +51,3 @@ expand.addEventListener('click', function () {
     setTimeout(closeItems, 940)
   }
 })
-
-let closeItems = function () {
-  if (breakpointDesktop.matches) {
-    for (let i = 4; i < brands.length; i++) {
-      brands[i].classList.remove('repair-items__block--show')
-    }
-  } else if (breakpointTablet.matches) {
-    for (let i = 3; i < brands.length; i++) {
-      brands[i].classList.remove('repair-items__block--show')
-    }
-  }
-}

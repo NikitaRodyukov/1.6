@@ -2,10 +2,10 @@ const expandButton = document.querySelector('.about-us__expand')
 const textBlock = document.querySelector('.about-us__text')
 const moreText = textBlock.querySelectorAll('.text--hidden')
 const moreTextBlock = textBlock.querySelector('.text__show-more')
-console.log(moreTextBlock)
 
+//открытие и закрытие доп текста
 expandButton.addEventListener('click', function () {
-  if (!expandButton.classList.contains('expanded')) {
+  if (!expandButton.classList.contains('expanded')) { //проверка на закрытый
     expandButton.classList.add('expanded')
     textBlock.classList.add('about-us__text--expanded')
     moreTextBlock.classList.add('text__show-more--visible')

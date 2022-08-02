@@ -8,6 +8,8 @@ const repairBlock = document.querySelector('.repair-block')
 const expandText = expand.querySelector('.repair-block__expand__text')
 
 const breakpointDesktop = window.matchMedia('(min-width:1366px)')
+
+//показ блоков в соответствии с разрешением
 if (breakpointDesktop.matches) {
   for (let i = 0; i < 8; i++) {
     brands[i].classList.add('items__block--show')
@@ -18,8 +20,10 @@ if (breakpointDesktop.matches) {
   }
 }
 
+//показ доб плоков по кнопке
 expand.addEventListener('click', function () {
   if (expand.classList.contains('repair-block__expand--false')) {
+    //проверка открыто ли окно
     if (breakpointDesktop.matches) {
       for (let i = 8; i < brands.length; i++) {
         brands[i].classList.add('items__block--show')
@@ -36,6 +40,7 @@ expand.addEventListener('click', function () {
     expandIcon.classList.add('repair-block__expand__icon--rotated')
     expandText.innerHTML = 'Скрыть'
   } else if (expand.classList.contains('repair-block__expand--expanded')) {
+    //скрывание блоков через кнопку
     repairBlock.classList.remove('repair-block__expand--expanded')
     expand.classList.add('repair-block__expand--false')
     blockItems.classList.remove('items__wrapper--expanded')
@@ -46,7 +51,8 @@ expand.addEventListener('click', function () {
   }
 })
 
-let closeItems = function () {
+//функция убирает блоки
+export const closeItems = function () {
   if (breakpointDesktop.matches) {
     for (let i = 8; i < brands.length; i++) {
       brands[i].classList.remove('items__block--show')

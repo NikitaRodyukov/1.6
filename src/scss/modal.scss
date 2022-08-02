@@ -50,7 +50,7 @@
     height: 40px;
     background: $bgButtonColor;
     border-radius: 20px;
-    transform: translate(-4px, -720px);
+    transform: translate(16px, -710px);
 
     &::after {
       position: absolute;
@@ -82,7 +82,7 @@
   .call {
     height: 676px;
     .btn-close {
-      transform: translate(-4px, -380px);
+      transform: translate(19px, -365px);
     }
     .modal {
       &__wrapper {
