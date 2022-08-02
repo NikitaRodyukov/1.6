@@ -73,130 +73,158 @@
       }
     }
   }
-}
 
-.title {
-  display: flex;
-  position: relative;
-  align-items: center;
-  margin-top: 0;
-
-  font-size: 1.7rem;
-  font-family: $fontBold;
-  color: $textColorSecond;
-
-  &::before {
-    display: block;
-    content: '';
-    position: absolute;
-    left: -16px;
-
-    width: 4px;
-    height: 40px;
-
-    background: $shadowColor;
-
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-  }
-}
-
-.slider-menu {
-  display: flex;
-  overflow-x: auto;
-  gap: 1.5rem;
-
-  margin: 1.5rem 0;
-
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  &::after {
-    display: block;
-    position: absolute;
-    content: '';
-    right: 0px;
-
-    width: 1.5rem;
-    height: 2.5rem;
-
-    background: $bgGradient;
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  &__item {
+  .title {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-
-    font-family: $fontMed;
-    font-weight: 500;
-    color: $textColorMain;
-
-    &:last-child {
-      margin-right: 1rem;
-    }
-
-    &--selected {
-      width: 15.38rem;
-      padding: 0.5rem 0;
-
-      border: 2px solid $borderColorItemSelected;
-      border-radius: 6px;
-      background: white;
-    }
-  }
-}
-
-.about-us {
-  padding-left: 0;
-
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  letter-spacing: 0.2px;
-  color: $textColorSecond;
-
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__text {
-    margin-right: 1rem;
-  }
-
-  &__expand {
     position: relative;
-  }
+    align-items: center;
+    margin-top: 0;
 
-  &__bg-image {
-    padding: 0;
-    margin-left: -1rem;
+    font-size: 1.7rem;
+    font-family: $fontBold;
+    color: $textColorSecond;
 
-    img {
-      width: 320px;
-      height: 180px;
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      left: -16px;
+
+      width: 4px;
+      height: 40px;
+
+      background: $shadowColor;
+
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
     }
   }
+
+  .slider-menu {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+
+    margin: 1.5rem 0;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::after {
+      display: block;
+      position: absolute;
+      content: '';
+      right: 0px;
+
+      width: 1.5rem;
+      height: 2.5rem;
+
+      background: $bgGradient;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      font-family: $fontMed;
+      font-weight: 500;
+      color: $textColorMain;
+
+      &:last-child {
+        margin-right: 1rem;
+      }
+
+      &--selected {
+        width: 15.38rem;
+        padding: 0.5rem 0;
+
+        border: 2px solid $borderColorItemSelected;
+        border-radius: 6px;
+        background: white;
+      }
+    }
+  }
+
+  .about-us {
+    padding-left: 0;
+
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    letter-spacing: 0.2px;
+    color: $textColorSecond;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__text {
+      margin-right: 1rem;
+      height: 110px;
+      overflow: hidden;
+
+      &--expanded {
+        overflow: visible;
+        height: 350px;
+      }
+
+      .text {
+        &--hidden {
+          display: none;
+        }
+
+        &--visible {
+          display: inline;
+        }
+
+        &__show-more {
+          display: none;
+
+          &--visible {
+            display: inline;
+          }
+        }
+      }
+    }
+
+    &__expand {
+      position: relative;
+    }
+
+    &__bg-image {
+      padding: 0;
+      margin-left: -1rem;
+
+      img {
+        width: 320px;
+        height: 180px;
+      }
+    }
+  }
+
+  .expand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    margin-bottom: 0.75rem;
+
+    font-size: 1rem;
+    font-weight: 600;
+    color: $textColorSecond;
+  }
+
+  .expanded {
+    margin-top: 0.5rem;
+  }
 }
-
-.expand {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-
-  margin-bottom: 0.75rem;
-
-  font-size: 1rem;
-  font-weight: 600;
-  color: $textColorSecond;
-}
-
 @media (min-width: 768px) {
   .top-menu {
     &__part {
@@ -240,6 +268,7 @@
 
     &__text {
       margin-right: 0;
+      height: 163px;
 
       line-height: 1.2rem;
       span {
@@ -357,8 +386,15 @@
 
   .about-us {
     &__text {
-      span {
-        display: inline;
+      height: 222px;
+
+      &--expanded{
+        height: 400px;
+      }
+      span.text {
+        &--hidden {
+          display: inline;
+        }
       }
     }
 

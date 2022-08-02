@@ -1,30 +1,27 @@
 @media (min-width: 320px) {
   .modal {
     position: absolute;
+    right: 0;
     visibility: hidden;
     opacity: 0;
-    box-sizing: border-box;
     max-width: 320px;
-    padding: 1rem;
     border: 0;
     z-index: 102;
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
       16px 0px 52px rgba(14, 24, 80, 0.2);
 
     color: $textColorMain;
-    transform: translate(0%);
     background-color: white;
     transition: all 0.5s ease-in-out;
 
     &--active {
       visibility: visible;
       opacity: 1;
-      transform: translate(0%);
     }
 
     &__wrapper {
       position: relative;
-      padding: 104px 0;
+      padding: 104px 1rem;
 
       .submit-button {
         position: absolute;
@@ -116,14 +113,27 @@
   }
 }
 
-@media (min-width: 768px) {
-  
+@media (min-width: 1366px) {
+  .modal{
+    max-width: 410px;
+    height: 200vh;
+    &__wrapper{
+      padding: 2.5rem 2rem;
 
-  .modal {
-    &--active {
-      visibility: visible;
-      opacity: 1;
-      transform: translateX(134%);
+      .submit-button{
+        bottom: -7px;
+      }
+    }
+  }
+
+  .btn-close{
+    transform: translate(-80px, -577px);
+  }
+
+  .call {
+    height: 200vh;
+    .btn-close {
+      transform: translate(-64px, -225px);
     }
   }
 }

@@ -172,6 +172,12 @@
   }
 }
 
+@media (min-width: 768px){
+  .aside-menu{
+    max-width: 320px;
+  }
+}
+
 @media (min-width: 1366px) {
   aside.aside-menu {
     position: absolute;
@@ -182,5 +188,11 @@
     opacity: 1;
     transform: translate(0px);
     box-shadow: none;
+  }
+
+  .header-part{
+    &__btn-close{
+      display: none;
+    }
   }
 }
