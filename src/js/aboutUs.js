@@ -5,9 +5,12 @@ const textBlock = document.querySelector('.about-us__text')
 const moreText = textBlock.querySelectorAll('.text--hidden')
 const moreTextBlock = textBlock.querySelector('.text__show-more')
 
+const sliderMenu = document.querySelector('.slider-menu')
+
 //открытие и закрытие доп текста
 expandButton.addEventListener('click', function () {
-  if (!expandButton.classList.contains('expanded')) { //проверка на закрытый
+  if (!expandButton.classList.contains('expanded')) {
+    //проверка на закрытый
     expandButton.classList.add('expanded')
     expandButtonText.innerHTML = 'Скрыть'
     expandButtonIcon.classList.add('icon--rotated')
@@ -26,4 +29,12 @@ expandButton.addEventListener('click', function () {
       text.classList.remove('text--visible')
     })
   }
+})
+
+// добавление обводки для ссылки меню
+sliderMenu.addEventListener('click', function (e) {
+  sliderMenu
+    .querySelector('.slider-menu__item--selected')
+    .classList.remove('slider-menu__item--selected')
+  e.target.classList.add('slider-menu__item--selected')
 })

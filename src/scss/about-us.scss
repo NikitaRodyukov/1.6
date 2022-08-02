@@ -140,9 +140,8 @@
         margin-right: 1rem;
       }
 
-      &--selected {
-        width: 15.38rem;
-        padding: 0.5rem 0;
+      &--selected {        
+        padding: 0.5rem 1rem;
 
         border: 2px solid $borderColorItemSelected;
         border-radius: 6px;
