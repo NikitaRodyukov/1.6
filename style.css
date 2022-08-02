@@ -540,8 +540,7 @@ p {
       .slider-menu__item:last-child {
         margin-right: 1rem; }
       .slider-menu__item--selected {
-        width: 15.38rem;
-        padding: 0.5rem 0;
+        padding: 0.5rem 1rem;
         border: 2px solid #b8ffec;
         border-radius: 6px;
         background: white; }
