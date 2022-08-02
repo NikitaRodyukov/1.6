@@ -1151,7 +1151,7 @@ p {
     height: 40px;
     background: #ff3e79;
     border-radius: 20px;
-    transform: translate(-4px, -720px); }
+    transform: translate(16px, -710px); }
     .btn-close::after {
       position: absolute;
       top: 10px;
@@ -1177,7 +1177,7 @@ p {
   .call {
     height: 676px; }
     .call .btn-close {
-      transform: translate(-4px, -380px); }
+      transform: translate(19px, -365px); }
     .call .modal__wrapper .submit-button {
       right: 35px;
       bottom: 35px; }
